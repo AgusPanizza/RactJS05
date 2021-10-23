@@ -1,6 +1,11 @@
-# Getting Started with Create React App
+# RAMBLA
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Rambla es un café de especialidad. 
+La idea de este proyecto es poder mostrar quienes somos, que hacemos y cuales son los productos que vendemos. 
+Creamos un e-shop para darle la posibilidad a nuestros clientes de comprar online sin necesidad de moverse de sus casas. 
+
+*El sitio todavía se encuentra en desarrollo*
+
 
 ## Available Scripts
 
