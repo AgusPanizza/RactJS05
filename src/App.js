@@ -9,55 +9,56 @@ import {
   Route,
   Switch,
   Redirect,
- } from 'react-router-dom'                                   
+ } from 'react-router-dom'       
+import { CartProvider } from './context/CartContext';               
+import { CartScreen } from './components/CartScreen/CartScreen';
+import { UIProvider } from './context/UIContext';
+
 
 function App() {
-
+ 
   return (
       <>
+
+<UIProvider>
+
+<CartProvider>
+
       <BrowserRouter>
 
+      <NavBar logo=""/>  
 
       <Switch>
         <Route exact path="/">
-          <div className="fotos">
-          <NavBar logo="RAMBLA"/>  
-          </div>
+          <div className="fotos"></div>
         </Route>
 
-        <Route exact path="/nosotros">
-        <NavBar logo="RAMBLA"/>  
+        <Route exact path="/nosotros"> 
           <h1>Nosotros</h1>
         </Route>        
         
         <Route exact path="/nuestro café">      
-        <NavBar logo="RAMBLA"/>  
           <h1>Nuestro Café</h1>
         </Route>
 
         <Route exact path="/patisserie">
-        <NavBar logo="RAMBLA"/>  
           <h1>Patisserie</h1>
         </Route>
 
         <Route exact path="/e-Shop/:categoryId">
-        <NavBar logo="RAMBLA"/>  
         <ItemListContainer/>       
         </Route>
 
         <Route exact path="/detail/:itemId">
-        <NavBar logo="RAMBLA"/>  
         <ItemDetailContainer/>       
         </Route>
 
-        <Route exact path="/contacto">
-        <NavBar logo="RAMBLA"/>  
+        <Route exact path="/contacto"> 
           <h1>Contacto</h1>
         </Route>
         
         <Route exact path="/cart">
-        <NavBar logo="RAMBLA"/>  
-        <h1>Carrito</h1>
+        <CartScreen/>
         </Route>
 
         <Route path="*">
@@ -66,6 +67,11 @@ function App() {
       </Switch>
 
       </BrowserRouter>
+      
+      </CartProvider>
+
+      </UIProvider>
+
       </>
   );
 }

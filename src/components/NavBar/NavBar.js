@@ -2,17 +2,16 @@ import React from 'react'
 import { Link, NavLink } from 'react-router-dom'
 import { CartWidget } from './CartWidget'
 import "./NavBar.css"
-import{NavDropdown} from 'react-bootstrap'
+import{Navbar, Container,NavDropdown} from 'react-bootstrap'
 
 export const NavBar = ({logo}) =>{
 return (
 <header>
-<h1 className="logo">
-<img src= "../Logo.png" alt="logo" width="150px" height="130px"/>
-{logo}
-</h1>
 
-<nav className="Nav">
+<h1 className= "logo"><img src= "../../Logo.png" alt="logo" width="150px" height="130px"/>RAMBLA</h1>
+
+<Navbar className="Nav">
+<Container>
 <NavLink exact to= "/">Home</NavLink>
 <NavLink exact to= "/nosotros">Nosotros</NavLink>
 <NavLink exact to= "/nuestro Café">Nuestro Café</NavLink>
@@ -24,7 +23,9 @@ return (
 <NavLink exact to= "/contacto">Contacto</NavLink>
 
 <Link to= "/Cart"><CartWidget/></Link>
-</nav>
+
+</Container>
+</Navbar>
 
 </header>
 )
